@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Only Khmer Product Details</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <a href="Index.html" style="text-decoration: none;">
+                        <p>Only Khmer</p>
+                    </a>
+                </div>
+                <div class="nav-menu" id="navmenu">
+                    <ul>
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="Women.html" class="link">Women</a></li>
+                        <li><a href="men.html" class="link">Men</a></li>
+                        <li><a href="boy.html" class="link">Boys</a></li>
+                        <li><a href="girl.html" class="link">Girls</a></li>
+                        <!-- Trigger Cart Sidebar -->
+                        <li><a href="#" class="link" onclick="toggleCart()"><i class='bx bx-cart'></i> <span
+                                    id="nav-cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <button class="btn white-btn" id="loginBtn"><a href="Login.html"
+                            style="color: white; text-decoration: none;">Sign In</a></button>
+                </div>
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="menufunction()"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- PRODUCT DETAILS -->
+        <div class="product-container">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <img id="main-product-img" src="img/women6.jpg" alt="Main Product Image">
+                    <div class="thumbnails">
+                        <img src="img/women6.jpg" data-full="img/women6.jpg" class="thumbnail-item" alt="View 1">
+                        <img src="img/women6.2.jpg" data-full="img/women6.2.jpg" class="thumbnail-item" alt="View 2">
+                        <img src="img/women6.1.jpg" data-full="img/women6.1.jpg" class="thumbnail-item" alt="View 3">
+                        <img src="img/women6.6.jpg" data-full="img/women6.6.jpg" class="thumbnail-item" alt="View 4">
+                        <img src="img/women6.5.jpg" data-full="img/women6.5.jpg" class="thumbnail-item" alt="View 5">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h1 id="product-title">Cropped Tank Top</h1>
+                    <p class="product-price"><b>$<span id="product-price">9.59</span></b></p>
+                    <div class="options">
+                        <label for="size-select">Size</label>
+                        <select class="select" id="size-select">
+                            <option value="M">M</option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="options">
+                        <label for="color-select">Color</label>
+                        <select class="select" id="color-select">
+                            <option value="Default">Default</option>
+                            <option value="white">white</option>
+                            <option value="Black">black</option>
+                        </select>
+                    </div>
+
+                    <p class="product-description">
+                        Code: 12225101887 <br>
+                        Crop layer t-shirt featuring long sleeves, crop-inside with button fastening. <br>
+                        Model is 167 cm tall / 43 kg weight and is wearing size XS.
+                    </p>
+
+                    <button class="addtocart" id="add-to-cart-btn">
+                        <p>Add to Cart</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CART SIDEBAR (Hidden by default) -->
+            <div class="cart-overlay" id="cart-overlay">
+                <div class="cart-sidebar">
+                    <div class="cart-header">
+                        <h2>Your Cart</h2>
+                        <button class="close-cart" onclick="toggleCart()">×</button>
+                    </div>
+
+                    <div class="cart-items-container" id="cart-items-list">
+                        <!-- Items will be injected here by JS -->
+                    </div>
+
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total-price">$0.00</span>
+                        </div>
+                        <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Trending -->
+        <h1>Trending 🔥</h1>
+        <div class="fullpic">
+            <div class="pic">
+                <div class="gallery">
+                    <a href="wtrending.html"><img src="img/Women6.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $9.59</b><br>Cropped Tank Top</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="mtrending.html"><img src="img/men11.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $29.95</b><br>Regular Strip Polo Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="btrending.html"><img src="img/Boy1.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $6.47</b><br>Loose Fitted T-Shirts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="gtrending.html"><img src="img/Girl2.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $7.95</b><br>Regular T-Shirt With Printed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <h2 style="color: white;background-color: #339966;width:auto;">
+            <marquee behavior="scroll" direction="left" scrollamount="6"> Free delivery on oder above 40$ spent
+            </marquee>
+        </h2>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/share/1BXXS2LW6k/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/president_heng/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://mail.google.com/mail/" target="_blank"><i class="fa-brands fa-google-plus"></i></a>
+                <a href="https://www.youtube.com/@MMegamind" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <h3>We Accept</h3>
+                <img src="img/We-accept-payment–for-web-footer-1.png" alt="visa">
+            </div>
+        </div>
+    </footer>
+
+    </footer>
+</body>
+<script>
+    // --- JAVASCRIPT LOGIC ---
+
+    // 1. Mobile Menu Toggle
+    function menufunction() {
+        var i = document.getElementById("navmenu");
+        if (i.className === "nav-menu") {
+            i.className += " responsive";
+        } else {
+            i.className = "nav-menu";
+        }
+    }
+
+    // 2. Toggle Cart Sidebar
+    function toggleCart() {
+        const overlay = document.getElementById('cart-overlay');
+        const isOpen = overlay.classList.contains('open');
+
+        if (!isOpen) {
+            renderCartContents(); // Refresh items when opening
+            overlay.classList.add('open');
+        } else {
+            overlay.classList.remove('open');
+        }
+    }
+
+    // 3. Update Nav Count
+    function updateNavCart() {
+        const cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+        const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+        const navCount = document.getElementById('nav-cart-count');
+        if (navCount) navCount.innerText = count;
+    }
+
+    // 4. Render Cart Inside Sidebar
+    function renderCartContents() {
+        const cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+        const listContainer = document.getElementById('cart-items-list');
+        const totalEl = document.getElementById('cart-total-price');
+
+        listContainer.innerHTML = ''; // Clear current list
+        let total = 0;
+
+        if (cart.length === 0) {
+            listContainer.innerHTML = '<p style="text-align:center; color:#999;">Your cart is empty.</p>';
+        } else {
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const itemHTML = `
+                        <div class="cart-item">
+                            <div class="cart-item-details">
+                                <h4>${item.title}</h4>
+                                <p>Size: ${item.size} | Color: ${item.color}</p>
+                                <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
+                            </div>
+                            <div style="text-align:right;">
+                                <p style="font-weight:bold;">$${itemTotal.toFixed(2)}</p>
+                                <button class="remove-item-btn" onclick="removeItem(${index})">Remove</button>
+                            </div>
+                        </div>
+                    `;
+                listContainer.innerHTML += itemHTML;
+            });
+        }
+
+        totalEl.innerText = '$' + total.toFixed(2);
+    }
+
+    // 5. Remove Item
+    function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+        cart.splice(index, 1); // Remove item at index
+        localStorage.setItem('onlyKhmerCart', JSON.stringify(cart));
+
+        updateNavCart();
+        renderCartContents();
+    }
+
+    // 6. Page Load Events
+    document.addEventListener('DOMContentLoaded', () => {
+        updateNavCart();
+
+        // Thumbnail Logic
+        const mainImg = document.getElementById('main-product-img');
+        const thumbnails = document.querySelectorAll('.thumbnail-item');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                const fullImgSrc = thumbnail.getAttribute('data-full');
+                // Simple check to ensure we don't break if data-full is missing
+                if (fullImgSrc) mainImg.src = fullImgSrc;
+
+                thumbnails.forEach(t => t.style.borderColor = 'transparent');
+                thumbnail.style.borderColor = 'rgb(252, 137, 156)';
+            })
+        });
+
+        // Add to Cart Logic
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+
+        addToCartBtn.addEventListener('click', () => {
+            const productTitle = document.getElementById('product-title').textContent;
+            const selectedColor = document.getElementById('color-select').value;
+            const selectedSize = document.getElementById('size-select').value;
+            const price = parseFloat(document.getElementById('product-price').textContent);
+
+            const product = {
+                title: productTitle,
+                color: selectedColor,
+                size: selectedSize,
+                price: price,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+
+            // Check duplicate
+            const existingIndex = cart.findIndex(item =>
+                item.title === product.title &&
+                item.size === product.size &&
+                item.color === product.color
+            );
+
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem('onlyKhmerCart', JSON.stringify(cart));
+            updateNavCart();
+
+            // OPEN THE CART SIDEBAR automatically
+            toggleCart();
+        });
+    });
+</script>
+
+</html>

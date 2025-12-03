@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Only Khmer Home</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <a href="#" style="text-decoration: none;">
+                        <p>Only Khmer</p>
+                    </a>
+                </div>
+                <div class="nav-menu" id="navmenu">
+                    <ul>
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="Women.html" class="link">Women</a></li>
+                        <li><a href="men.html" class="link">Men</a></li>
+                        <li><a href="boy.html" class="link">Boys</a></li>
+                        <li><a href="girl.html" class="link">Girls</a></li>
+                        <!-- Trigger Cart Sidebar -->
+                        <li><a href="#" class="link" onclick="toggleCart()"><i class='bx bx-cart'></i> <span id="nav-cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <button class="btn white-btn" id="loginBtn"><a href="Login.html"
+                            style="color: white; text-decoration: none;">Sign In</a></button>
+                </div>
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="menufunction()"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- CART SIDEBAR (Hidden by default) -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" onclick="toggleCart()">×</button>
+            </div>
+
+            <div class="cart-items-container" id="cart-items-list">
+                <!-- Items will be injected here by JS -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <main>
+        <div class="slide">
+            <div class="item item1"><a href="men.html"><img src="img/men.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item2"><a href="Women.html"><img src="img/women.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item3"><a href="boy.html"><img src="img/boy.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item4"><a href="girl.html"><img src="img/girl.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item5"><a href="men.html"><img src="img/men.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item6"><a href="Women.html"><img src="img/women.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item7"><a href="boy.html"><img src="img/boy.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+            <div class="item item8"><a href="girl.html"><img src="img/girl.jpg" alt="men" width="400px"
+                        height="400px"></a></div>
+        </div>
+        <div class="banner2">
+            <h1 style="color: white;background-color: rgb(252, 137, 156);width:auto;">
+                <marquee behavior="scroll" direction="left" scrollamount="6"> <span class="Welcome">Welcome to</span>
+                    Only Khmer <span>!</span>🙏🏻🤍</marquee>
+            </h1>
+        </div>
+        <div class="women">
+            <h1>Women💖</h1>
+            <ul>
+                <li><a href="Women.html" class="Shop-More">Shop More</a></li>
+            </ul>
+        </div>
+        <div class="fullpic">
+            <div class="pic">
+                <div class="gallery">
+                    <a href="Women1.html"><img src="img/Women1.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $27.59</b><br>Regular Blazer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="Women2.html"><img src="img/TAKK9301.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $23.95</b><br>Mexi Off-Shoulder Dresses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="Women3.html"><img src="img/TAKK9386.jpg" alt="women3" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $15.59</b><br>Crop Layer T-Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="Women4.html"><img src="img/women2.jpg" alt="women4" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $15.59</b><br>Slim Fitted Jeans</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="women">
+            <h1>Men❤️‍🔥</h1>
+            <ul>
+                <li><a href="men.html" class="Shop-More">Shop More</a></li>
+            </ul>
+        </div>
+        <div class="fullpic">
+            <div class="pic">
+                <div class="gallery">
+                    <a href="men1.html"><img src="img/men5.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $15.59</b><br>Loose Fitted Polo Shirts With Zip</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="men2.html"><img src="img/Men2.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $10.59</b><br>Mesh Jersey Tank Top</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="men3.html"><img src="img/Men3.jpg" alt="women3" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $15.59</b><br>Relaxed Fit Texture Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="men4.html"><img src="img/Men4.jpg" alt="women4" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $13.95</b><br>Loose Fitted Tank Top</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="women">
+            <h1>Boys🤖</h1>
+            <ul>
+                <li><a href="boy.html" class="Shop-More">Shop More</a></li>
+            </ul>
+        </div>
+        <div class="fullpic">
+            <div class="pic">
+                <div class="gallery">
+                    <a href="btrending.html"><img src="img/Boy1.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $6.47</b><br>Loose Fitted T-Shirts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="boy2.html"><img src="img1/Boy2.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $7.95</b><br>Regular T-Shirt With Printed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="boy3.html"><img src="img1/Boy3.jpg" alt="women3" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $4.95</b><br>Regular T-Shirts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="boy4.html"><img src="img1/Boy4.jpg" alt="women4" class="pic1"></a>
+                    <div class="desc">
+                        <p><span style="color: red;"><b>US $3.95</b></span> <span
+                                style="text-decoration: line-through;">US $12.95</span> <span
+                                style="color: red;"><b>-69.5%</b></span><br>Regular Polo Shirt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="women">
+            <h1>Girls🧚🏻‍♀️</h1>
+            <ul>
+                <li><a href="girl.html" class="Shop-More">Shop More</a></li>
+            </ul>
+        </div>
+        <div class="fullpic">
+            <div class="pic">
+                <div class="gallery">
+                    <a href="girl1.html"><img src="img1/Girl1.jpg" alt="women1" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $10.87</b><br>Floral Dress</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="gtrending.html"><img src="img/Girl2.jpg" alt="women2" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $5.82</b><br>Regular Tank Top</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="girl3.html"><img src="img1/Girl3.jpg" alt="women3" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $8.95</b><br>Regular Blouse</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="gallery">
+                    <a href="girl4.html"><img src="img/Girl4.jpg" alt="women4" class="pic1"></a>
+                    <div class="desc">
+                        <p><b>US $7.95</b><br>Regular Pockets Shirt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2 style= "color: white;background-color: #339966;width:auto;"><marquee behavior="scroll" direction="left"scrollamount="6"> Free delivery on oder above 40$ spent</marquee></h2>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/share/1BXXS2LW6k/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/president_heng/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://mail.google.com/mail/" target="_blank"><i class="fa-brands fa-google-plus"></i></a>
+                <a href="https://www.youtube.com/@MMegamind" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <h3>We Accept</h3>
+                <img src="img/We-accept-payment–for-web-footer-1.png" alt="visa">
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+        // --- JAVASCRIPT LOGIC ---
+
+        // 1. Mobile Menu Toggle
+        function menufunction() {
+            var i = document.getElementById("navmenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+        // 2. Toggle Cart Sidebar
+        function toggleCart() {
+            const overlay = document.getElementById('cart-overlay');
+            const isOpen = overlay.classList.contains('open');
+            
+            if (!isOpen) {
+                renderCartContents(); // Refresh items when opening
+                overlay.classList.add('open');
+            } else {
+                overlay.classList.remove('open');
+            }
+        }
+
+        // 3. Update Nav Count
+        function updateNavCart() {
+            const cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+            const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+            const navCount = document.getElementById('nav-cart-count');
+            if(navCount) navCount.innerText = count;
+        }
+
+        // 4. Render Cart Inside Sidebar
+        function renderCartContents() {
+            const cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+            const listContainer = document.getElementById('cart-items-list');
+            const totalEl = document.getElementById('cart-total-price');
+            
+            listContainer.innerHTML = ''; // Clear current list
+            let total = 0;
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = '<p style="text-align:center; color:#999;">Your cart is empty.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    const itemHTML = `
+                        <div class="cart-item">
+                            <div class="cart-item-details">
+                                <h4>${item.title}</h4>
+                                <p>Size: ${item.size} | Color: ${item.color}</p>
+                                <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
+                            </div>
+                            <div style="text-align:right;">
+                                <p style="font-weight:bold;">$${itemTotal.toFixed(2)}</p>
+                                <button class="remove-item-btn" onclick="removeItem(${index})">Remove</button>
+                            </div>
+                        </div>
+                    `;
+                    listContainer.innerHTML += itemHTML;
+                });
+            }
+
+            totalEl.innerText = '$' + total.toFixed(2);
+        }
+
+        // 5. Remove Item
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+            cart.splice(index, 1); // Remove item at index
+            localStorage.setItem('onlyKhmerCart', JSON.stringify(cart));
+            
+            updateNavCart();
+            renderCartContents();
+        }
+
+        // 6. Page Load Events
+        document.addEventListener('DOMContentLoaded', ()=>{
+            updateNavCart(); 
+
+            // Thumbnail Logic
+            const mainImg = document.getElementById('main-product-img');
+            const thumbnails = document.querySelectorAll('.thumbnail-item');
+            
+            thumbnails.forEach(thumbnail => {
+               thumbnail.addEventListener('click', () => { 
+                const fullImgSrc = thumbnail.getAttribute('data-full');
+                // Simple check to ensure we don't break if data-full is missing
+                if(fullImgSrc) mainImg.src = fullImgSrc;
+                
+                thumbnails.forEach(t => t.style.borderColor = 'transparent');
+                thumbnail.style.borderColor = 'rgb(252, 137, 156)';
+               }) 
+            });
+
+            // Add to Cart Logic
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            
+            addToCartBtn.addEventListener('click', () => {
+                const productTitle = document.getElementById('product-title').textContent;
+                const selectedColor = document.getElementById('color-select').value;
+                const selectedSize = document.getElementById('size-select').value;
+                const price = parseFloat(document.getElementById('product-price').textContent);
+
+                const product = {
+                    title: productTitle,
+                    color: selectedColor,
+                    size: selectedSize,
+                    price: price,
+                    quantity: 1
+                };
+
+                let cart = JSON.parse(localStorage.getItem('onlyKhmerCart')) || [];
+                
+                // Check duplicate
+                const existingIndex = cart.findIndex(item => 
+                    item.title === product.title && 
+                    item.size === product.size && 
+                    item.color === product.color
+                );
+                
+                if (existingIndex > -1) {
+                    cart[existingIndex].quantity += 1;
+                } else {
+                    cart.push(product);
+                }
+
+                localStorage.setItem('onlyKhmerCart', JSON.stringify(cart));
+                updateNavCart();
+                
+                // OPEN THE CART SIDEBAR automatically
+                toggleCart();
+            });
+        });
+
+</script>
+
+</html>
